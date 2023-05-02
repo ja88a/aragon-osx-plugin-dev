@@ -9,20 +9,34 @@ dotenvConfig({ path: resolve(__dirname, dotenvConfigPath) });
 if (!process.env.ALCHEMY_API_KEY) {
   throw new Error("ALCHEMY_API_KEY in .env not set");
 }
-const goerliAlchemyKey = process.env.ALCHEMY_API_KEY;
+const alchemyApiKey = process.env.ALCHEMY_API_KEY || 'KEY_NOT_SET';
 
-if (!process.env.PRIVATE_KEY) {
-  throw new Error("PRIVATE_KEY in .env not set");
+if (!process.env.PRIVATE_KEY_GOERLI) {
+  console.warn("PRIVATE_KEY_GOERLI in .env not set");
 }
-const privateKeyGoerli = process.env.PRIVATE_KEY;
+const privateKeyGoerli = process.env.PRIVATE_KEY_GOERLI || 'KEY_NOT_SET';
+
+if (!process.env.PRIVATE_KEY_DEVNET) {
+  console.warn("PRIVATE_KEY_DEVNET in .env not set");
+}
+const privateKeyDevnet = process.env.PRIVATE_KEY_DEVNET || 'KEY_NOT_SET';
+
+if (!process.env.DEVNET_RPC) {
+  console.warn("DEVNET_RPC in .env not set");
+}
+const devnetProvider = process.env.DEVNET_RPC || 'URL_NOT_SET';
 
 const config: HardhatUserConfig = {
   defaultNetwork: "hardhat",
   networks: {
     hardhat: {},
     goerli: {
-      url: `https://eth-goerli.g.alchemy.com/v2/${goerliAlchemyKey}`,
+      url: `https://eth-goerli.g.alchemy.com/v2/${alchemyApiKey}`,
       accounts: [privateKeyGoerli],
+    },
+    devnet: {
+      url: devnetProvider,
+      accounts: [privateKeyDevnet],
     },
   },
   solidity: {
