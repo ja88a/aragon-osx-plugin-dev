@@ -13,7 +13,8 @@
     "@nomicfoundation/hardhat-toolbox": "^2.0.2",
     "dotenv": "^16.0.3",
     "ethers": "^5.7.2",
-    "hardhat": "^2.14.0"
+    "hardhat": "^2.14.0",
+    "run": "^1.4.0"
   },
   "dependencies": {
     "@aragon/osx": "^1.2.0",

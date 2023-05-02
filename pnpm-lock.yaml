@@ -7,9 +7,6 @@ dependencies:
   '@openzeppelin/contracts':
     specifier: ^4.8.3
     version: 4.8.3
-  deno:
-    specifier: ^0.1.1
-    version: 0.1.1
 
 devDependencies:
   '@aragon/osx-ethers':
@@ -27,6 +24,9 @@ devDependencies:
   hardhat:
     specifier: ^2.14.0
     version: 2.14.0(ts-node@10.9.1)(typescript@5.0.4)
+  run:
+    specifier: ^1.4.0
+    version: 1.4.0
 
 packages:
 
@@ -2282,12 +2282,6 @@ packages:
       type: 1.2.0
     dev: false
 
-  /dafo@0.1.1:
-    resolution: {integrity: sha512-18XhtDt5qQ5pAfWzo1t3mRXQPanY8diFQFjCxh+/0mko5QHztCv6oLgPL9kKxB8aeYutp8lWC7BqjGzC8GWX1w==}
-    dependencies:
-      noda: 0.1.2
-    dev: false
-
   /dashdash@1.14.1:
     resolution: {integrity: sha512-jRFi8UDGo6j+odZiEpjazZaWqEal3w/basFjQHQEwVtZJGDpxbH1MeYluwCS8Xq5wmLJooDlMgvVarmWfGM44g==}
     engines: {node: '>=0.10'}
@@ -2392,15 +2386,6 @@ packages:
   /delayed-stream@1.0.0:
     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
     engines: {node: '>=0.4.0'}
-
-  /deno@0.1.1:
-    resolution: {integrity: sha512-vdXCOZOXXgRUFPIV2HbyBBT+u1TjKmDueCEJuk9Q+ADLS7jmVfdfGxp0vI5o/gOjbA1OwOYMVfg249+9vjYa7w==}
-    hasBin: true
-    dependencies:
-      dafo: 0.1.1
-      noda: 0.6.0
-      qir: 0.1.0
-    dev: false
 
   /depd@2.0.0:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
@@ -4577,15 +4562,6 @@ packages:
       lower-case: 1.1.4
     dev: false
 
-  /noda@0.1.2:
-    resolution: {integrity: sha512-oP5xzQsC4dujsuRlshsnb2R+0BWJmPRJx8MXQlTgbrSSqi5Szeu67Lr8Od1/lkc+8evLPRDmHl9L0xeVJYRGaw==}
-    dev: false
-
-  /noda@0.6.0:
-    resolution: {integrity: sha512-Zj3eTQ1cL83zGvorxbGmeqNnt/h+2nH3jT/XLI2oXHL9LH6IKoPvFh6feT1e/yFhRRByP3Q+waM+2dcXIdZkqg==}
-    engines: {node: '>=6'}
-    dev: false
-
   /node-addon-api@2.0.2:
     resolution: {integrity: sha512-Ntyt4AIXyaLIuMHF6IOoTakB3K+RWxwtsHNRxllEoA6vPwP9o4866g6YWDLUdnucilZhmkxiHwHr11gAENw+QA==}
 
@@ -5023,12 +4999,6 @@ packages:
     resolution: {integrity: sha512-BwQpbqxSCBJVpamI6ydzcKqyFmnd5msMWUGvzXLm1aXvusbbgkbOto/EUPM00hjveJEaJtdbhUjKSzWRhQVkaw==}
     dev: false
 
-  /qir@0.1.0:
-    resolution: {integrity: sha512-LJUKDMyPsaog5uDarzqterz+SfdyA3mfvq45kSLV0X5IOSPy/nlueKvLg8nClOSKp57c1E0bU/BFHwHFUoVhcw==}
-    dependencies:
-      noda: 0.6.0
-    dev: false
-
   /qs@6.11.0:
     resolution: {integrity: sha512-MvjoMCJwEarSbUYk5O+nmoSzSutSsTwF85zcHPQ9OrlFoZOYIjaqBAJIqIXjptyD5vThxGq52Xu/MaJzRkIk4Q==}
     engines: {node: '>=0.6'}
@@ -5327,6 +5297,14 @@ packages:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
     dependencies:
       queue-microtask: 1.2.3
+    dev: true
+
+  /run@1.4.0:
+    resolution: {integrity: sha512-962oBW07IjQ9SizyMHdoteVbDKt/e2nEsnTRZ0WjK/zs+jfQQICqH0qj0D5lqZNuy0JkbzfA6IOqw0Sk7C3DlQ==}
+    engines: {node: '>=v0.9.0'}
+    hasBin: true
+    dependencies:
+      minimatch: 5.0.1
     dev: true
 
   /rustbn.js@0.2.0:
